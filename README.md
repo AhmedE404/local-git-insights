@@ -76,7 +76,7 @@ npm run stats
 
 ## ⚙️ Configuration
 
-The engine is pre-configured to ignore non-code assets. To add more extensions (like `.min.js` or `package-lock.json`), open `git-stats.js` and update the exclusion regex.
+The engine is pre-configured to ignore non-code assets. To add more extensions (like `.min.js` or `package-lock.json`), open [git-stats.js](./git-stats.js) and update the exclusion regex.
 
 ---
 
