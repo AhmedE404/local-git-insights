@@ -1,0 +1,25 @@
+{
+    "name": "local-git-insights",
+    "version": "1.0.0",
+    "description": "A zero-dependency analytics engine to extract repository metrics locally.",
+    "main": "git-stats.js",
+    "scripts": {
+        "start": "node git-stats.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AhmedE404/local-git-insights.git"
+    },
+    "keywords": [
+        "git",
+        "stats",
+        "insights",
+        "cli"
+    ],
+    "author": "Ahmed Hesham Mahmoud Samy",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/AhmedE404/local-git-insights/issues"
+    },
+    "homepage": "https://github.com/AhmedE404/local-git-insights#readme"
+}

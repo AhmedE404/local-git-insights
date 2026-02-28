@@ -1,5 +1,12 @@
 # 📊 Local Git Insights (Free GitHub Insights Alternative)
 
+![License](https://img.shields.io/github/license/AhmedE404/local-git-insights?style=flat-square&color=blue)
+![Stars](https://img.shields.io/github/stars/AhmedE404/local-git-insights?style=flat-square&color=yellow)
+![Forks](https://img.shields.io/github/forks/AhmedE404/local-git-insights?style=flat-square&color=lightgray)
+![Issues](https://img.shields.io/github/issues/AhmedE404/local-git-insights?style=flat-square&color=success)
+![Last Commit](https://img.shields.io/github/last-commit/AhmedE404/local-git-insights?style=flat-square&color=orange)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
+
 **Local Git Insights** is a high-performance, zero-dependency analytics engine designed to extract deep repository metrics directly from your Git history. It serves as a lightweight, privacy-focused alternative to GitHub's premium "Insights" feature.
 
 ---
