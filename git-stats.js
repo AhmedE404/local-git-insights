@@ -7,7 +7,8 @@ const child = require('child_process');
  * %aE: إيميل المبرمج (المفتاح الفريد للدمج)
  */
 const logData = child.execSync('git log --all --numstat --pretty=format:%aN%x09%aE', {
-    encoding: 'utf-8'
+    encoding: 'utf-8',
+    // maxBuffer: 1024 * 1024 * 100 // 100 MB لضمان عدم توقف السكربت مع المشاريع الكبيرة
 });
 
 const lines = logData.split(/\r?\n/); // تقسيم المخرجات لسطور (دعم ويندوز وماك)
