@@ -21,10 +21,10 @@ lines.forEach(line => {
     if (!/^\d/.test(line)) {
         // إذا كان السطر لا يبدأ برقم، إذن هو سطر [الاسم - التاب - الإيميل]
         let [name, email] = line.split('\t');
-        
+
         if (email && name && name.trim() !== '-') {
             currentAuthorEmail = email.trim();
-            
+
             // إنشاء كائن للمبرمج إذا لم يكن موجوداً (التجميع يتم بالإيميل)
             if (!stats[currentAuthorEmail]) {
                 stats[currentAuthorEmail] = {
@@ -37,22 +37,24 @@ lines.forEach(line => {
             }
             // تحديث الاسم لضمان استخدام أحدث اسم مستخدم لهذا الإيميل
             stats[currentAuthorEmail].Name = name.trim();
+
+            // ✅ يتم زيادة الكوميت هنا (مرة واحدة لكل عملية)
+            stats[currentAuthorEmail].Commits += 1;
         }
     } else if (currentAuthorEmail) {
         /**
          * السطر يبدأ برقم، إذن هو سطر إحصائيات ملف: [إضافة - حذف - مسار الملف]
          */
         const [added, deleted, filePath] = line.split(/\s+/);
-        
+
         // استبعاد الملفات غير البرمجية (صور، صوت، إلخ) باستخدام Regex
         const isBinary = /\.(png|jpg|jpeg|gif|mp3|wav|mp4|mov|zip|exe|pdf|ttf|woff|ico|swp)$/i.test(filePath);
-        
+
         if (!isNaN(added) && filePath && !isBinary) {
             const author = stats[currentAuthorEmail];
             author.Added += parseInt(added);
             author.Deleted += parseInt(deleted);
             author.Files += 1; // زيادة عدد الملفات الفريدة
-            author.Commits += 1; // زيادة عدد المساهمات
         }
     }
 });
